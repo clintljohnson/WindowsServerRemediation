@@ -15,7 +15,7 @@ function Fix-RDPCertificate {
             return $true
         }
 
-        # Default CA thumbprint for MDOT-CA-256
+        # Default CA thumbprint for trusted certificate
         $CAThumbprint = "16ef0f59190b83d77be39fe73c29270ef9d3dea9"
         Write-Verbose "Using CA Thumbprint: $CAThumbprint"
 
@@ -50,7 +50,7 @@ function Fix-RDPCertificate {
                 } | Select-Object -First 1
 
                 if (-not $validCert) {
-                    throw "No valid certificate found signed by MDOT-CA-256"
+                    throw "No valid certificate found signed by a trusted certificate"
                 }
 
                 Write-Verbose "Found valid certificate, configuring RDP"
