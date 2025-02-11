@@ -139,7 +139,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 - see the [gpl-3.0.txt](gpl-3.0.txt) file for details.
+This project is licensed under the GNU General Public License v3.0 - see the https://www.gnu.org/licenses/gpl-3.0.txt file for details.
 
 ## Disclaimer
 
