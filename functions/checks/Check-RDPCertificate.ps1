@@ -11,11 +11,11 @@ function Check-RDPCertificate {
         CheckNumber = 44
         Name = "RDP Certificate Configuration"
         Status = "OK"
-        Details = "RDP service is using a valid MDOT-CA-256 signed certificate"
+        Details = "RDP service is using a valid signed certificate"
     }
 
     try {
-        # Default CA thumbprint for MDOT-CA-256
+        # Default CA thumbprint for RDP Service Certificate
         $CAThumbprint = "16ef0f59190b83d77be39fe73c29270ef9d3dea9"
 
         Write-Verbose "Using CA Thumbprint: $CAThumbprint"
@@ -69,7 +69,7 @@ function Check-RDPCertificate {
 
         if (-not $checkResult.Valid) {
             $result.Status = "WARNING"
-            $result.Details = "RDP Service is not using an MDOT-CA-256 Signed Certificate"
+            $result.Details = "RDP Service is not using a trusted Signed Certificate"
         }
         else {
             Write-Verbose "Found valid certificate: $($checkResult.CertificateSubject)"
