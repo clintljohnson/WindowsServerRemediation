@@ -1,4 +1,4 @@
-# Windows Server Remediation
+# Windows Server Security Remediation
 
 A comprehensive PowerShell-based security assessment and remediation tool for Windows Server 2022 and 2025.
 
